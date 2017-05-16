@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hora da Yoga</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- CAEBECALHO -->
+	<header id="cabecalho">
+		<div class="container linha espacoEntre">
+			<div id="logo"></div>
+			<div id="menuCabecalho" class="linha centralizar">
+				<ul>
+					<li><a href="#hdy">Hora da Yoga</a></li>
+					<li><a href="#secaoCalendario">Agende sua aula</a></li>
+					<li><a href="#hdb">Hora do Bem</a></li>
+					<li><a href="#contato">Contato</a></li>
+				</ul>
+			</div>
+			<div id="botoesCabecalho">
+				<div class="">
+					<button><i></i>Entrar</button>
+					<ul>
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Cadastro</a></li>
+						<li><a href="#">Sua Conta</a></li>
+						<li><a href="#">Sua Agenda</a></li>
+					</ul>
+				</div>
+				<button><i></i>Agende sua aula</button>
+				<button><i></i>Carrinho</button>
+			</div>
+		</div>
+	</header>
+	<!-- FIM CAEBECALHO -->
+
+	<!-- SLIDER -->
+	<section id="slider">
+		<!-- código bootstrap -->
+	</section>
+	<!-- FIM SLIDER -->
+
+	<!-- CALENDÁRIO -->
+	<section id="secaoCalendario">
+		<main class="container">
+			<!-- filtro -->
+				<div id="filtroCalendario" class="linha espacoEntre">
+					<select>
+						<option> - bairro - </option>
+						<option> Bela Vista </option>
+						<option> Pinheiros </option>
+						<option> República </option>
+						<option> Vila Madalena </option>
+						<option> Vila Mariana </option>
+					</select>
+					<select>
+						<option> - período - </option>
+						<option> manhã </option>
+						<option> tarde </option>
+						<option> noite </option>
+					</select>
+					<select>
+						<option> - modalidade - </option>
+						<option> hatha </option>
+						<option> vinyasa </option>
+						<option> ashtanga </option>
+						<option> power yoga </option>
+					</select>
+					<select>
+						<option> - nível - </option>
+						<option>para todos</option>
+						<option>iniciante</option>
+						<option>intermediário</option>
+						<option>avançado</option>
+					</select>
+				</div>
+			<!-- fim filtro -->
+
+			<!-- cabeçalho calendário -->
+			<ul id="cabecalhoCalendario" class="linha">
+				<li class="porcentagem">segunda</li>
+				<li class="porcentagem">terça</li>
+				<li class="porcentagem">quarta</li>
+				<li class="porcentagem">quinta</li>
+				<li class="porcentagem">sexta</li>
+				<li class="porcentagem">sábado</li>
+				<li class="porcentagem">domingo</li>
+			</ul>
+			<!-- fim cabeçalho calendário -->
+
+			<!-- dias calendário -->
+			<ul id="diasCalendario" class="linha">
+				<li class="porcentagem">
+					<div>
+						<div class="dia"></div>
+						<div class="hora"></div>
+					</div>
+					<div class="local"></div>
+					<div class="modalidade"></div>
+					<div class="nivel"></div>
+					<div class="preco"></div>
+					<div class="botoes">
+						<button class="botao botaoDoacao"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></button>
+						<button class="botao botaoAdicionar"><i></i></button>
+					</div>
+				
+
+
+			</ul>
+			<!-- fim dias calendário -->
+		</main>
+		
+	</section>
+	<!-- FIM CALENDÁRIO -->
+
+	<!-- HORA DA YOGA -->
+	<section id="hdy">
+		
+	</section>
+	<!-- FIM HORA DA YOGA -->
+
+	<!-- HORA DO BEM -->
+	<section id="hdb">
+		
+	</section>
+	<!-- FIM HORA DO BEM -->
+
+	<section id="depoimentos">
+		
+	</section>
+
+	<!-- CONTATO -->
+	<section id="contato">
+		
+	</section>
+	<!-- FIM CONTATO -->
+
+	<!-- RODAPÉ -->
+	<footer id="rodape">
+		
+	</footer>
+	<!-- FIM RODAPÉ -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
