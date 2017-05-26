@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hora da Yoga</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- ESTILOS -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- FIM ESTILOS -->
+</head>
+<body>
+	<!-- CAEBECALHO -->
+	<header id="cabecalho">
+		<div id="containerCabecalho" class="container linha espacoEntre alinharVertical">
+			<div id="logo" class="centralizar"><a href="#slider"><h1>hora da yoga</h1></a></div>
+			<div id="menuCabecalho" class="centralizar">
+				<ul class="linha alinharVertical">
+					<li><a href="#hdy">SOBRE</a></li>
+					<li><a href="#hdb">HORA DO BEM</a></li>
+					<li><a href="#depoimentos">DEPOIMENTOS</a></li>
+					<li><a href="#contato">CONTATO</a></li>
+				</ul>
+			</div>
+			<div id="botoesCabecalho" class="linha alinharVertical">
+				<div class="dropdown linha centralizar">
+					<button class="botao botaoEntrar">ENTRAR <i class="fa fa-angle-down" aria-hidden="true"></i></button>
+						<div class="conteudo-dropdown">
+							<ul>
+								<li><a href="#" data-toggle="modal" data-target="#modalLogar">LOGIN</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#modalCadastrar">CADASTRO</a></li>
+								<li><a href="#">SUA CONTA</a></li>
+								<li><a href="#">SUA AGENDA</a></li>
+							</ul>
+						</div>
+				</div>
+				<!-- <div class="tooltip linha centralizar">
+					<a href="#secaoCalendario" class="botao botaoCalendario"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+					<span class="tooltiptext">agendar</span>
+				</div> -->
+				<div class="linha centralizar" name="agendar aula">
+					<a href="#secaoCalendario" class="botao botaoCalendario" name="clique para agendar uma aula"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+				</div>
+				<div class="linha centralizar">
+					<button class="botao botaoCarrinho"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  (0)</button>	
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- FIM CAEBECALHO -->
+
+	<!-- MODAL ENTRAR -->
+	<div class="modal fade" id="modalLogar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Logar</h4>
+	      </div>
+		<div class="modal-body">
+			<form class="formLogar">
+				<div class="form-group">
+					<label for="inputEmail">Email</label>
+					<input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+				</div>
+				<div class="form-group">
+					<label for="inputSenha">Senha</label>
+					<input type="password" class="form-control" id="inputSenha" placeholder="Senha">
+				</div>
+				<button type="submit" class="btn btn-default botao botaoForm" >logar</button>
+			</form>
+	     </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- FIM MODAL ENTRAR -->
+
+	<!-- MODAL CADASTRAR -->
+		<div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+			<div class="modal-header">
+	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+	        	<h4 class="modal-title" id="myModalLabel">Cadastrar</h4>
+	      	</div>
+			<form class="modalCadastrar">
+				<div class="dadosGerais">
+					<div class="form-group">
+					    <label for="inputNome">Nome Completo</label>
+					    <input type="nome" class="form-control" id="inputNome" placeholder="Nome">
+				  	</div>
+					<div class="form-group">
+					    <label for="inputEmail">Email</label>
+					    <input type="email" class="form-control" id="inputEmailCadastro" placeholder="E-mail">
+				  	</div>
+				  		<div class="form-group">
+					    <label for="inputSenha">Senha</label>
+					    <input type="password" class="form-control" id="inputSenhaCadastro" placeholder="Senha">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="inputConfirmarSenha">Confirmar Senha</label>
+					    <input type="password" class="form-control" id="inputConfirmarSenha" placeholder="Senha">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="inputCPF">CPF</label>
+					    <input type="cpf" class="form-control" id="inputCPF" placeholder="CPF">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="inputNascimento">Data de Nascimento</label>
+					    <input type="nascimento" class="form-control" id="nascimento" placeholder="Nascimento">
+				  	</div>
+				</div>
+				<div class="endereco">
+					<div class="form-group">
+					    <label for="inputCep">Informe o CEP</label>
+					    <input type="cep" class="form-control" id="cep" placeholder="CEP">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="inputEndereco">Endereço</label>
+					    <input type="Endereço" class="form-control" id="endereco" placeholder="Endereço">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="inputNumero">Numero</label>
+					    <input type="numero" class="form-control" id="numero" placeholder="Numero">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="inputEstado">Estado</label>
+					    <input type="estado" class="form-control" id="estado" placeholder="Estado">
+				  	</div>
+				  	 <div class="form-group">
+					    <label for="inputCidade">Cidade</label>
+					    <input type="cidade" class="form-control" id="cidade" placeholder="Cidade">
+				  	</div>
+				  	<button type="submit" class="btn btn-default botao botaoForm">cadastrar</button>	
+				</div>
+			</form>
+	    </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<!-- FIM MODAL CADASTRAR -->
+
+
+
+	<!-- SLIDER -->
+	<section id="slider">
+
+		<!-- slider carrosel bootstrap -->
+		<div id="slideBox">
+			<div id="carousel-example-generic" class="carousel" data-ride="carousel">
+				<!-- Indicators -->
+				 <ol class="carousel-indicators">
+				 	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				 </ol>
+				 <!-- Wrapper for slides -->
+				 <div class="carousel-inner" role="listbox">
+				    <div class="slide1	slide item active linha centralizar">
+					    <img src="img/01.jpg" class="img-slide">
+					    <div class="carousel-caption linha coluna centralizar">
+					    	<h1 class="textoLogo">hora da yoga</h1>
+					    	<h3>O caminho fácil e barato para você fazer yoga!</h3>
+					    	<h4>Hora da Yoga é um facilitador para quem quer praticar yoga.</h4>
+							<h4>São aulas de R$ 15,00* em vários lugares da cidade</h4>
+							
+							<div class="linha coluna centralizar">
+								<a href="#secaoCalendario" class="botao botaoSlider botaoAgendar"> AGENDE SUA AULA POR R$ 15,00! </a>
+								<a href="#hdy" class="botao botaoSaibaMais01"> SAIBA MAIS</a>
+							</div>
+					    </div>
+					</div>
+					
+					<div class="slide2	slide item">
+					    <img src="img/02.jpg" alt="...">
+					    <div class="carousel-caption linha coluna centralizar">
+						    <div class="slide2Textos linha espacoEntre alinharVertical">	
+						    	<div class="como">
+						    		<img src="img/icons/filter-2.svg">
+							    	<h3>1. Filtre suas preferências</h3>
+							    	<p>selecione o dia, horário e nível da aula</p>
+							    </div>
+							    <div class="como">
+							    	<img src="img/icons/cart.svg">
+							    	<h3>2. Adicione as aulas ao carrinho</h3>
+							    	<p>você pode comprar uma ou mais aulas</p>
+							    </div>
+							    <div class="como">
+							    	<img src="img/icons/credit-card-1.svg">
+							    	<h3>3. Pague online</h3>
+							    	<p>toda segurança e conforto que é pagar online</p>
+							    </div>
+							</div>
+							<div>
+								<a href="#secaoCalendario" class="botao botaoSlider botaoAgendar"> AGENDE SUA AULA POR R$ 15,00 :) </a>
+							</div>
+					    </div>
+					    
+					</div>
+					<div class="slide3	slide item">
+					    <img src="img/03.jpg" alt="...">
+					    <div class="carousel-caption linha coluna centralizar">
+					    	<div class="slide3textos linha coluna centralizar">
+					    		<h2 class="tituloMissao">TRANSFORME SUA VIDA COM A</h2>
+					    		<span>hora da yoga</span>
+
+					    		<p><b>Acreditamos que a yoga é uma ferramenta de transformação do indivíduo e da sociedade. </b></p><p>São comprovados os benefícios científicos que a prática traz tanto para o indivíduo quanto para o ambiente em que está inserida, estendendo o alcance dos benefícios para a comunidade a sua volta.</p>
+					    		<div class="boxBotaoMissao">
+					    			<a href="#hdy" class="botao botaoSlider"> SAIBA MAIS</a>
+					    			<!-- <button class="botao botaoSaibaMais">SAIBA MAIS</button> -->
+					    		</div>
+					    	</div>
+					    </div>
+					</div>
+					<div class="slide4	slide item">
+					    <img src="img/casa1_rosa2.jpg" alt="...">
+					    <div class="carousel-caption linha coluna centralizar">
+					    	<div class="slide4textos linha coluna centralizar">
+					    		<i class="fa fa-gift fa-5x" aria-hidden="true"></i>
+					    		<h2>hora do bem</h2>
+					    		<p>Você pode nos ajudar a transformar o mundo doando horas de aula através do nosso projeto Hora do Bem, comprando horas ou até minutos de aula de yoga que serão dadas a instutuiçoes carentes.</p>
+					    	</div>
+					    	<div class="botoes linha centralizar">
+					    		<a href="#hdb" class="botao botaoSlider"> SAIBA MAIS</a>
+					    		<a href="#hdb" class="botao botaoSlider botaoDoeAgora">QUERO DOAR</a>
+					    	</div>
+					    </div>
+					</div>
+				</div>
+				<!-- Controls -->
+		  		<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    		<span class="sr-only">Previous</span>
+		  		</a>
+		  		<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		   			 <span class="sr-only">Next</span>
+		  		</a>
+			</div>	     
+		</div>
+	</section>
+	<!-- FIM SLIDER -->
+
+	<!-- CALENDÁRIO -->
+	<section id="secaoCalendario">
+		<main id="calendario" class="container">
+			<!-- filtro -->
+				<div id="introCalendario" class="centralizar">
+					<h2 class="centralizar">AGENDE SUA AULA</h2>
+					<div id="containerIntroCalendario">	
+						<h4> Quer começar a praticar yoga com um preço que cabe no seu bolso?</h4>
+						<p>Selecione abaixo o melhor dia, horário e local e boa aula :)</p>
+					</div>
+				</div>
+				<div id="filtroCalendario" class="linha espacoEntre">
+					<select id="bairro">
+						<option value=""> - bairro -</option>
+						<option value="Água Rasa">Água Rasa</option>
+						<option value="Alto de Pinheiros">Alto de Pinheiros</option>
+						<option value="Anhanguera">Anhanguera</option>
+						<option value="Aricanduva">Aricanduva</option>
+						<option value="Artur Alvim">Artur Alvim</option>
+						<option value="Barra Funda">Barra Funda</option>
+						<option value="Bela Vista">Bela Vista</option>
+						<option value="Belém">Belém</option>
+						<option value="Bom Retiro">Bom Retiro</option>
+						<option value="Brás">Brás</option>
+						<option value="Brasilândia">Brasilândia</option>
+						<option value="Butantã">Butantã</option>
+						<option value="Cachoeirinha">Cachoeirinha</option>
+						<option value="Cambuci">Cambuci</option>
+						<option value="Campo Belo">Campo Belo</option>
+						<option value="Campo Grande">Campo Grande</option>
+						<option value="Campo Limpo">Campo Limpo</option>
+						<option value="Cangaíba">Cangaíba</option>
+						<option value="Capão Redondo">Capão Redondo</option>
+						<option value="Carrão">Carrão</option>
+						<option value="Casa Verde">Casa Verde</option>
+						<option value="Cerqueira César">Cerqueira César</option>
+						<option value="Cidade Ademar">Cidade Ademar</option>
+						<option value="Cidade Dutra">Cidade Dutra</option>
+						<option value="Cidade Líder">Cidade Líder</option>
+						<option value="Cidade Monções">Cidade Monções</option>
+						<option value="Cidade Tiradentes">Cidade Tiradentes</option>
+						<option value="Consolação">Consolação</option>
+						<option value="Cursino">Cursino</option>
+						<option value="Ermelino Matarazzo">Ermelino Matarazzo</option>
+						<option value="Freguesia do Ó">Freguesia do Ó</option>
+						<option value="Grajaú">Grajaú</option>
+						<option value="Guaianases">Guaianases</option>
+						<option value="Ibirapuera">Ibirapuera</option>
+						<option value="Iguatemi">Iguatemi</option>
+						<option value="Ipiranga">Ipiranga</option>
+						<option value="Itaim Bibi">Itaim Bibi</option>
+						<option value="Itaim Paulista">Itaim Paulista</option>
+						<option value="Itaquera">Itaquera</option>
+						<option value="Jabaquara">Jabaquara</option>
+						<option value="Jaçanã">Jaçanã</option>
+						<option value="Jaguara">Jaguara</option>
+						<option value="Jaguaré">Jaguaré</option>
+						<option value="Jaraguá">Jaraguá</option>
+						<option value="Jardim Ângela">Jardim Ângela</option>
+						<option value="Jardim Helena">Jardim Helena</option>
+						<option value="Jardim Paulista">Jardim Paulista</option>
+						<option value="Jardim São Luís">Jardim São Luís</option>
+						<option value="José Bonifácio">José Bonifácio</option>
+						<option value="Lajeado">Lajeado</option>
+						<option value="Lapa">Lapa</option>
+						<option value="Liberdade">Liberdade</option>
+						<option value="Limão">Limão</option>
+						<option value="Mandaqui">Mandaqui</option>
+						<option value="Marsilac">Marsilac</option>
+						<option value="Moema">Moema</option>
+						<option value="Mooca">Mooca</option>
+						<option value="Morumbi">Morumbi</option>
+						<option value="Paraisópolis">Paraisópolis</option>
+						<option value="Parelheiros">Parelheiros</option>
+						<option value="Pari">Pari</option>
+						<option value="Parque do Carmo">Parque do Carmo</option>
+						<option value="Pedreira">Pedreira</option>
+						<option value="Penha">Penha</option>
+						<option value="Perdizes">Perdizes</option>
+						<option value="Perus">Perus</option>
+						<option value="Pinheiros">Pinheiros</option>
+						<option value="Pirituba">Pirituba</option>
+						<option value="Ponte Rasa">Ponte Rasa</option>
+						<option value="Raposo Tavares">Raposo Tavares</option>
+						<option value="República">República</option>
+						<option value="Rio Pequeno">Rio Pequeno</option>
+						<option value="Sacomã">Sacomã</option>
+						<option value="Santana">Santana</option>
+						<option value="Santa Cecília">Santa Cecília</option>
+						<option value="Santo Amaro">Santo Amaro</option>
+						<option value="São Domingos">São Domingos</option>
+						<option value="São Lucas">São Lucas</option>
+						<option value="São Mateus">São Mateus</option>
+						<option value="São Miguel">São Miguel</option>
+						<option value="São Rafael">São Rafael</option>
+						<option value="Sapopemba">Sapopemba</option>
+						<option value="Saúde">Saúde</option>
+						<option value="Sé">Sé</option>
+						<option value="Socorro">Socorro</option>
+						<option value="Tatuapé">Tatuapé</option>
+						<option value="Tremembé">Tremembé</option>
+						<option value="Tucuruvi">Tucuruvi</option>
+						<option value="Vila Andrade">Vila Andrade</option>
+						<option value="Vila Curuçá">Vila Curuçá</option>
+						<option value="Vila Formosa">Vila Formosa</option>
+						<option value="Vila Guilherme">Vila Guilherme</option>
+						<option value="Vila Jacuí">Vila Jacuí</option>
+						<option value="Vila Leopoldina">Vila Leopoldina</option>
+						<option value="Vila Maria">Vila Maria</option>
+						<option value="Vila Mariana">Vila Mariana</option>
+						<option value="Vila Matilde">Vila Matilde</option>
+						<option value="Vila Medeiros">Vila Medeiros</option>
+						<option value="Vila Prudente">Vila Prudente</option>
+						<option value="Vila Sônia">Vila Sônia</option>
+
+					</select>
+					<select id="periodo">
+						<option value=""> - período - </option>
+						<option> manhã </option>
+						<option> tarde </option>
+						<option> noite </option>
+					</select>
+					<select id="modalidade">
+						<option value=""> - modalidade - </option>
+						<option> hatha </option>
+						<option> vinyasa </option>
+						<option> ashtanga </option>
+						<option> power yoga </option>
+					</select>
+					<select id="nivel">
+						<option value=""> - nível - </option>
+						<option value="todos">para todos</option>
+						<option>iniciante</option>
+						<option>intermediário</option>
+						<option>avançado</option>
+					</select>
+				</div>
+			<!-- fim filtro -->
+
+			<!-- cabeçalho calendário -->
+			<ul id="cabecalhoCalendario" class="linha">
+				<li class="porcentagem">S E G U N D A</li>
+				<li class="porcentagem">T E R Ç A</li>
+				<li class="porcentagem">Q U A R T A</li>
+				<li class="porcentagem">Q U I N T A</li>
+				<li class="porcentagem">S E X T A</li>
+				<li class="porcentagem">S Á B A D O</li>
+				<li class="porcentagem">D O M I N G O</li>
+			</ul>
+			<!-- fim cabeçalho calendário -->
+
+			<!-- dias calendário -->
+			<ul id="diasCalendario" class="linha">
+				<!-- 1ª linha do calendário -->
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">01</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Santa Cecília</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">02</div>
+
+					<span class="hora"> 12:00 - 13:00 </span>
+					<span class="periodo" value="tarde"></span>
+					<span class="bairro">Alto de Pinheiros</span>
+					<span class="modalidade">power yoga</span>
+					<span class="nivel">avançado</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">03</div>
+
+					<span class="hora"> 07:00 - 08:00 </span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Alto de Pinheiros</span>
+					<span class="modalidade">vinyasa</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">04</div>
+
+					<span class="hora">13:30 - 14:30</span>
+					<span class="periodo" value="tarde"></span>
+					<span class="bairro">Vila Madalena</span>
+					<span class="modalidade">vinyasa</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">05</div>
+
+					<span class="hora">10:15 - 11:15</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">República</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">intermediário</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">06</div>
+
+					<span class="hora">08:00 - 09:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Vila Mariana</span>
+					<span class="modalidade">ashtanga</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">07</div>
+
+					<span class="hora"> 13:00 - 14:00 </span>
+					<span class="periodo" value="tarde"></span>
+					<span class="bairro">Alto de Pinheiros</span>
+					<span class="nivel">avançado</span>
+					<span class="modalidade">power yoga</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				
+				<!-- 2ª linha do calendário -->
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">08</div>
+
+					<span class="hora">10:15 - 11:15</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Pinheiros</span>
+					<span class="modalidade">power yoga</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">09</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">República</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">10</div>
+
+					<span class="hora">18:00 - 19:00</span>
+					<span class="periodo" value="noite"></span>
+					<span class="bairro">Pirituba</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">11</div>
+
+					<span class="hora">08:00 - 09:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Mooca</span>
+					<span class="modalidade">ashtanga</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">12</div>
+
+					<span class="hora">08:00 - 09:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Tatuapé</span>
+					<span class="modalidade">vinyasa</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">13</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Santa Cecília</span>
+					<span class="modalidade">vinyasa</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">14</div>
+
+					<span class="hora">10:30 - 11:30</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Ibirapuera</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">todos</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<!-- 3ª linha do calendário -->
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">15</div>
+
+					<span class="hora">18:30 - 19:30</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Consolação</span>
+					<span class="modalidade">power yoga</span>
+					<span class="nivel">avançado</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">16</div>
+
+					<span class="hora">12:00 - 13:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Cerqueira César</span>
+					<span class="modalidade">vinyasa</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">17</div>
+
+					<span class="hora">16:00 - 17:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Belém</span>
+					<span class="modalidade">ashtanga</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">18</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Barra Funda</span>
+					<span class="modalidade">vinyasa</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">19</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Sacomã</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">20</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Limão</span>
+					<span class="modalidade">vinyasa</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">21</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Santana</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<!-- 4ª linha do calendário -->
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">22</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Cambuci</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">23</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Bom Retiro</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">24</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Ipiranga</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha passado">
+					<div class="dia linha">25</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Jabaquara</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha">
+					<div class="dia linha">26</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Lapa</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha">
+					<div class="dia linha">27</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Saúde</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 0,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha">
+					<div class="dia linha">28</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Perdizes</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+
+				<!-- 5ª linha do calendário -->
+
+				<li class="diaCard porcentagem linha">
+					<div class="dia linha">29</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Sé</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha">
+					<div class="dia linha">30</div>
+
+					<span class="hora">09:00 - 10:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Santo Amaro</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha">
+					<div class="dia linha">31</div>
+
+					<span class="hora">08:00 - 09:00</span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro">Tremembé</span>
+					<span class="modalidade">hatha</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+						
+					</div>
+				</li>
+				<li class="diaCard porcentagem linha vazio desaparecer">
+					<span class="hora">15:00 - 16:00</span>
+					<span class="periodo" value="tarde"></span>
+					<span class="bairro">Vila Mariana</span>
+					<span class="modalidade">ashtanga</span>
+					<span class="nivel">iniciante</span>
+					<span class="preco">R$ 15,00</span>
+					<!-- <div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div> -->
+				</li>
+				<li class="diaCard porcentagem linha vazio desaparecer">
+					<div class="dia linha"> </div>
+					<span class="hora"> </span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro"> </span>
+					<span class="modalidade"> </span>
+					<span class="nivel"> </span>
+					<span class="preco"> </span>
+					<!-- <div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div> -->
+				</li>
+				<li class="diaCard porcentagem linha vazio desaparecer">
+					<div class="dia linha"> </div>
+					<span class="hora"> </span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro"> </span>
+					<span class="modalidade"> </span>
+					<span class="nivel"> </span>
+					<span class="preco"> </span>
+					<!-- <div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div> -->
+				</li>
+				<li class="diaCard porcentagem linha vazio desaparecer">
+					<div class="dia linha"> </div>
+					<span class="hora"> </span>
+					<span class="periodo" value="manhã"></span>
+					<span class="bairro"> </span>
+					<span class="modalidade"> </span>
+					<span class="nivel"> </span>
+					<span class="preco"> </span>
+					<!-- <div class="botoes linha espacoEntre">
+						<button class="botao botaoDoacao"
+						data-toggle="modal" data-target="#modalHDB"><i class="fa fa-gift" aria-hidden="true"></i></button>
+						<button class="botao botaoMaisEMenos" data-toggle="modal" data-target="#modalAddAula">
+  							<span class="plus"><i class="fa fa-plus"></i></span>
+  							<span class="minus"><i class="fa fa-minus"></i></span>
+						</button>
+					</div> -->
+				</li>
+
+			</ul>
+			<!-- fim dias calendário -->
+			<div class="setaCalendario linha centralizar">
+				<a href="#hdy"><i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></a>
+			</div>
+		</main>
+		
+	</section>
+	<!-- FIM CALENDÁRIO -->
+
+
+	<!-- FIM MODAL ADD CARRINHO -->
+
+	<!-- MODAL -->
+
+	<!-- MODAL ADD CARRINHO -->
+	<div class="modal fade" id="modalAddAula" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Adicionar aula ao carrinho?</h4>
+	      </div>
+		<div class="modal-body">
+	        <p class="dia"><b>dia: </b><span></span></p>
+	        <p class="hora"><b>hora: </b><span></span></p>
+	        <p class="bairro"><b>bairro: </b><span></span></p>
+	        <p class="modalidade"><b>modalidade: </b><span></span></p>
+	        <p class="nivel"><b>nível: </b><span></span></p>
+	     </div>
+
+	      <div class="modal-footer linha espacoEntre">
+	        <button type="button" class="btn btn-default botao botaoModalAdd navegar" data-dismiss="modal">sim! e continuar navegando</button>
+	        <button type="button" class="btn btn-primary botaoModalAdd pagar">sim! e ir para o carrinho</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- FIM MODAL ADD CARRINHO -->
+
+	<!-- MODAL HDB -->
+	<div class="modal fade" id="modalHDB" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel"><b>A HORA DO BEM</b></h4>
+	      </div>
+	      <div class="modal-body">
+	      	<h4>você está doando uma aula de yoga :) </h4>
+	        <p>A instituiçao desse mês é a Casa 1, um centro de cultura e acolhimento de LGBTs</p>
+	  	    <p>Para saber como foi, nos siga nas redes socias. Contaremos tudo por lá:</p>
+	  	    <div class="midiasModalHDB linha centralizar">
+				<a href="#www.facebook.com/Hora-da-Yoga"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+				<a href="#@horadayoga"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+			</div>
+	      </div>
+	      <div class="modal-footer modalHDB">
+	        <button type="button" class="btn btn-primary botao botaoModalHDB navegar" data-dismiss="modal">comprar mais aulas</button>
+	        <button type="button" class="btn btn-primary botao botaoModalHDB pagar">pagar aula</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- FIM MODAL HDB -->
+
+
+	<!-- FIM MODAL -->
+
+
+	<!-- SAIBA MAIS / HORA DA YOGA -->
+	<section id="hdy" class="container linha coluna centralizar">
+		<div class="hdyContainerTexto">
+			<h2 class="centralizarTexto">A HORA DA YOGA</h2>
+		</div>
+		<div class="cards container linha espacoEntre">
+			<div class="card ideia">
+				<img class="linha imagemHdy" src="img/icons/ideia.png">
+				<h3 class="centralizarTexto">A IDEIA</h3>
+				<p class="justificarTexto">A ideia nasceu a partir da compreensão de uma necessidade de expandir a prática da yoga . Entendemos a prática da yoga como uma ferramenta transformadora, mas que poucas pessoas tinham acesso, seja por conta do valor ou por .</p>
+			</div>
+			<div class="card quemSomos">
+				<img class="linha imagemHdy" src="img/icons/quemsomos.png">
+				<h3 class="centralizarTexto">QUEM SOMOS</h3>
+				<p class="justificarTexto">Somos Bárbara e Camila, publicitária e arquiteta que encontraram na yoga um meio de mudar o mundo.
+				Percebemos que existe a possibilidade de diminuir o custo da aula e criamos essa rede que além  de permitir o acesso às aula a um preço baixo, também conecta as pessoas que não podem pagar com quem quer e pode doar horas de aula através da Hora do Bem.</p>
+			</div>
+			<div class="card porqueYoga">
+				<img class="linha imagemHdy" src="img/icons/porque.png ">
+				<h3 class="centralizarTexto">POR QUE YOGA?</h3>
+				<p class="justificarTexto">Porque acreditamos que é uma ferramenta de transformação do indivíduo e da sociedade. São comprovados os benefícios científicos que a prática traz tanto para o indivíduo quanto para o ambiente em que está inserida, estendendo o alcance dos benefícios para a comunidade a sua volta.</p>
+			</div>		
+		</div>
+	</section>
+	<!-- FIM SAIBA MAIS / HORA DA YOGA  -->
+
+	<!-- HORA DO BEM -->
+	<section id="hdb" class=" linha coluna">
+		<div class="hdbContainer  container">
+			<div id="hdbTextos">
+				<h2 class="centralizarTexto tituloHDB">A HORA DO BEM</h2>
+				
+				<h3 class="centralizarTexto subtituloHDB">DOE UMA AULA DE YOGA</h3>
+				<div class="hdbTexto linha centralizar coluna">
+					<p class="justificarTexto"><b>A Hora do Bem é a forma que encontramos de expandir os benefícios da prática da Yoga a toda sociedade.</b></p> 
+					<p>Entendemos que o mundo melhor é responsabilidade de todos e queremos que todos nós tenhamos a oportunidade de contribuir.
+					Nossa proposta é que você doe 1hora de aula de yoga a uma instituição de caridade, escola pública ou comunidade carente, que poderão usufruir dos vários benefícios da Yoga.</p>
+					<p>Teremos uma instituição diferente por mês. Durante os 30 dias o valor total arrecadado será revertido em horas de aulas de acordo com o valor arrecadado. Quanto mais horas doadas mais pessoas serão impactadas.</p>
+					<p>Com compromisso e transparência informaremos sempre a instituição e seus contatos e teremos registros das aulas nas nossas redes socias.</p>
+					<div class="hdbTextoMS">
+						<a href="#www.facebook.com/Hora-da-Yoga"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+						<a href="#@horadayoga"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div id="instituicaoMes" class="container">
+				<h2 class="centralizarTexto">INSTITUIÇÃO DO MÊS</h2>
+				<div class="containerInstituição linha coluna centralizar">
+					<div class="linha">
+						<div class="instituicaoImg">
+							<img src="img/ong.png">
+						</div>
+						<div class="instituicaoTextoBox linha">
+							<div class="instituicaoTexto">	
+								<h3>CASA 1</h3>
+								<h4>Centro de cultura e acolhimento de LGBTs</h4>
+								<p>A Casa Um é o centro de cultura e acolhimento de LGBTs. O espaço acolhe pessoas LGBTs em situação de risco além de de servir como ambiente seguro de troca e criação de ideias.</p>
+							</div>
+							<div class="instituicaoInfo linha coluna">
+								<div>
+								<span>CONTATO</span>
+								</br>
+								<b>site:</b> <a href=""> casaum.com.br</a>
+								<p><b>endereço:</b> rua xispeteo, 177</p>
+								<p><b>telefone:</b> 11 5374.8080</p>
+								<b>email:</b> <a href="">casaum@casaum.com.br</a>
+								</div>
+								<div class="midiasSocias linha centralizar">
+									<a href="https://www.facebook.com/casaum/" class="botao facebook" target="_blanc"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+									<a href="#" class="botao twitter"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<button class="botao botaoDoacao02" data-toggle="modal" data-target="#modalHDB">QUERO DOAR</button>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- FIM HORA DO BEM -->
+
+	<section id="depoimentos" class="container linha coluna">
+		<h2 class="centralizarTexto">DEPOIMENTOS</h2>
+		<!-- <p>Acompanhe o que estão dizendo da hora da yoga e venha fazer parte!</p> -->
+		<div class="containerDepoimentos linha espacoEntre">
+			<div class="card depoimentos linha centralizar coluna">
+				<img src="img/depimeneto_vanessa.jpg">
+				<h3 class="centralizarTexto">Vanessa, 33</h3>
+				<p class="justificarTexto">A plataforma é facil de usar e posso comprar só as aulas que tenho certeza que posso ir. Fazer a compra pela intenet e com essa liberdade, me deixa muito feliz.</p>
+			</div>
+			<div class="card depoimentos linha centralizar coluna">
+				<img src="img/depoimento_es.jpg">
+				<h3 class="centralizarTexto">Estevão, 28</h3>
+				<p class="justificarTexto">Gosto do fato de poder fazer aula em vários lugares. Penso na agenda da minha semana e consigo ajustar as aulas de yoga perto do lugar onde estarei.</p>
+			</div>
+			<div class="card depoimentos linha centralizar coluna">
+				<img src="img/depoimento_ma.jpg">
+				<h3 class="centralizarTexto">Mariana, 28</h3>
+				<p class="justificarTexto">A proposta me atraiu porque sempre tive vontade de fazer yoga, mas não podia pagar o valor que muitos lugarem combram. Além de praticar yoga, gosto de contribuir através da Hora do Bem <3 </p>
+			</div>		
+		</div>
+		
+	</section>
+
+	<!-- CONTATO -->
+	<section id="contato" class="container linha coluna centralizar">
+		<div class="faleConosco linha coluna centralizar">
+			<h2>FALE COM A GENTE</h2>
+			<div class="formularioContato">
+				<form class="contato">
+					<div class="nomeFormularioContato">
+						<label  class="formularioContato nome" for="nome">Nome</label>
+						<div>	
+							<input class="nome" type="text" name="nome" placeholder="Seu nome completo">
+						</div>	
+					</div>
+					<div class="emailFormularioContato">
+						<label class="formularioContato email" for="email">Email</label>
+						<div>	
+							<input class="email" type="email" name="email" placeholder="Seu e-mail">
+						</div>	
+					</div>
+					<div class="textoFormularioContato">	
+						<label class="formularioContato texto" for="texto">Mensagem</label>
+						<div>	
+						    <textarea class="mensagem" id="texto" name="mensagem" cols="50" rows="4" placeholder="Deixe sua mensagem aqui!"></textarea>
+						 </div>
+						 <div class="linha centralizar">
+						 <button type="submit" class="botao botaoFormularioContato" >enviar mensagem</button>
+						 </div>
+					</div>
+				</form>
+			</div>
+
+			<div class="contatoFormularioContato linha coluna centralizar">
+				<a href="">horadayoga@gmail.com</a>
+				<div class="contatoMidiasSocias linha centralizar">
+					<button class="botao facebook"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></button>
+					<button class="botao twitter"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></button>
+				</div>
+			</div>	
+		</div>		
+	</section>
+	<!-- FIM CONTATO -->
+
+	<!-- RODAPÉ -->
+	<footer id="rodape" class="centralizarTexto">
+		<div class="containerRodape container linha coluna centralizar">
+			<span>hora da yoga</span>
+			<p>Todos os direitos reservados</p>
+			<p> 2017 </p>
+		</div>
+		
+	</footer>
+	<!-- FIM RODAPÉ -->
+
+	<!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- FIM SCRIPTS -->
+</body>
+</html>
